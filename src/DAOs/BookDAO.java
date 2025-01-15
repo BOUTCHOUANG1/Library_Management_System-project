@@ -41,15 +41,25 @@ public class BookDAO {
 
     // Method to delete a book from the database
     public static void deleteBook(ArrayList<Book> books, int id) {
-        String query = "DELETE FROM books WHERE id = ?";
+        String deleteLoansQuery = "DELETE FROM loans WHERE bookId = ?";
+        String deleteBookQuery = "DELETE FROM books WHERE id = ?";
         try (Connection connection = DB.connect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, id);
-            statement.executeUpdate();
+             PreparedStatement deleteLoansStatement = connection.prepareStatement(deleteLoansQuery);
+             PreparedStatement deleteBookStatement = connection.prepareStatement(deleteBookQuery)) {
+            // Delete related loans
+            deleteLoansStatement.setInt(1, id);
+            deleteLoansStatement.executeUpdate();
+
+            // Delete the book
+            deleteBookStatement.setInt(1, id);
+            deleteBookStatement.executeUpdate();
+
+            System.out.println("Book and related loans deleted successfully.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
     // Method to search for a book by title
     public static Book searchBookByTitle(String title) {
