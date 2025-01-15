@@ -1,5 +1,3 @@
-package models;
-
 import java.util.ArrayList;
 
 // The Book class represents a book in the library with its attributes and methods.

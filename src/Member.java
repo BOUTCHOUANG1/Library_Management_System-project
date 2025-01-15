@@ -1,8 +1,6 @@
-package models;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 // The models.Member class represents a member of the library with their attributes and methods.
 public class Member extends Person {

@@ -1,9 +1,9 @@
-package DAOs;
+import JDBC.DB;
 
-import models.Book;
-import JDBC.*;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 // Data Access Object (DAO) class for Book

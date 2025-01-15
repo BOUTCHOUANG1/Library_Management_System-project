@@ -1,8 +1,5 @@
-package models;
-
-import java.util.ArrayList;
-import java.util.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 // The models.Loan class represents a loan of a book to a member with its attributes and methods.
 public class Loan {

@@ -1,9 +1,8 @@
-package DAOs;
 import JDBC.DB;
-import models.Loan;
+
 import java.sql.*;
-import java.util.Date;
 import java.time.LocalDate;
+import java.util.Date;
 
 
 // Data Access Object (DAO) class for Loan

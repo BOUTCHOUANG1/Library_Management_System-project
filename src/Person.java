@@ -1,5 +1,3 @@
-package models;
-
 public class Person {
     private String firstName; // models.Member name
     private String lastName; // models.Member first name

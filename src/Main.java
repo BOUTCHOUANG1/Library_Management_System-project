@@ -1,6 +1,4 @@
-import DAOs.*;
 import JDBC.DB;
-import models.*;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
